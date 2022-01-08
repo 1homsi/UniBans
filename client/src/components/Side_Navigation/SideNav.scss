@@ -1,0 +1,36 @@
+.sidenav {
+  height: 100%;
+  width: 13vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #171e29;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-left: 13px;
+}
+
+.sidenavitem {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenavitem:hover {
+  color: #f1f1f1;
+}
+
+#profileImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #512da8;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  margin: 20px 0;
+}
