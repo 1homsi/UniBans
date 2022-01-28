@@ -1,23 +1,36 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import styles from "../../../styles/user/Login.module.scss";
 
 const Index = () => {
+  const router = useRouter();
+
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [space, setSpaceFound] = useState(false);
+
+  const userName = "1homsi";
+  const userPassword = "12345678";
 
   const submitForm = (event) => {
     event.preventDefault();
     if (space) {
       return false;
     }
-    console.log(`${name} \n ${email} \n ${password}`);
+
+    if (name === userName && password === userPassword) {
+      console.log(`${name} \n ${password}`);
+      router.push("/");
+    } else {
+      console.log("error");
+    }
   };
 
   return (
-    <div>
+    <div className={styles.content}>
       <h1>Login</h1>
-      {space ? <p>Username has space</p> : <></>}
+      {space ? <p className={styles.error}>Username has space</p> : <></>}
       <form className="form" onSubmit={submitForm}>
         <div>
           <label htmlFor="username">Username</label>
@@ -40,17 +53,6 @@ const Index = () => {
           ></input>
         </div>
         <div>
-          <label htmlFor="email">Email</label>
-          <br />
-          <input
-            type="email"
-            id="email"
-            placeholder="Email"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-        </div>
-        <div>
           <label htmlFor="password">Password</label>
           <br />
           <input
@@ -68,6 +70,8 @@ const Index = () => {
           </button>
         </div>
       </form>
+      <Link href="/user/register">Not a user? Register</Link>
+      <Link href="/">Forgot password</Link>
     </div>
   );
 };
