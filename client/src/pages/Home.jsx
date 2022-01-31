@@ -1,11 +1,8 @@
-import React from 'react';
-import Menu from '../components/Menu/Menu';
-
+import React from "react";
 
 function Home() {
   return (
     <div>
-      <Menu></Menu>
       <h1>Hello world</h1>
     </div>
   );

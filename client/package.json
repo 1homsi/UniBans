@@ -12,11 +12,10 @@
     "graphql-tag": "^2.10.1",
     "jwt-decode": "^2.2.0",
     "moment": "^2.24.0",
-    "node-sass": "^7.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^3.0.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.1",
     "socket.io-client": "^4.4.1"
@@ -42,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.49.0"
   }
 }
