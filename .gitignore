@@ -3,6 +3,7 @@
 /.pnp
 .env
 .pnp.js
+desktop.ini
 /coverage
 /build
 .DS_Store
