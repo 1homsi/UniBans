@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import { AuthContext } from "../../context/auth";
 
+import "./Menu.scss";
+
 function MenuBar() {
   const { user, logout } = useContext(AuthContext);
   const pathname = window.location.pathname;
@@ -49,7 +51,11 @@ function MenuBar() {
     </Menu>
   );
 
-  return menuBar;
+  return (
+    <>
+      <div className="NavBar">{menuBar}</div>
+    </>
+  );
 }
 
 export default MenuBar;

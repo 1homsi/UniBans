@@ -44,6 +44,8 @@ io.on('connection', (socket) => {
         if (user && isRealString(message.text)) {
             let tempObj = generateMessage(user.name, user.room, message.text);
             io.to(user.room).emit('newMessage', tempObj);
+            //TODO: Remove this line
+            console.log(tempObj)
             callback({
                 data: tempObj
             });
@@ -69,6 +71,9 @@ io.on('connection', (socket) => {
 
 });
 
+
+
+//TODO:
 server.listen(PORT, () => {
     console.log(`App running on port ${PORT}`);
 });

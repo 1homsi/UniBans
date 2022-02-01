@@ -1,3 +1,14 @@
+* {
+  color: white;
+}
+
+//Note: The property body is a common property so it should be in App.scss
+//Removed it from Login.scss
+//The color will be applied to the entire website
+body {
+  background: linear-gradient(to bottom right, #1c79dc, #d3d3d3);
+}
+
 .page-title {
   display: block !important;
   text-align: center;
