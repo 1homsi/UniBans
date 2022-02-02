@@ -1,11 +1,29 @@
+
+
 .form-container {
   box-shadow: 0 0 15px 0 black;
   padding: 100px;
   background-color: white;
   border-radius: 10px;
   margin-top: 5%;
+  //from here
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);  /* This will produce the blur */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px yellow; //or #ff0080   /* This will produce the shadow */
+  overflow: hidden;
+  //to here
   /* height: min-content; */
 }
+
+//added can be deleted 
+//make the input labels transparent
+// .form_input{
+//   background: rgba(255, 255, 255, 0.2);
+//   backdrop-filter: blur(30px);  /* This will produce the blur */
+//   border: 2px solid rgba(255, 255, 255, 0.1);
+// }
+
 
 .form-container h1 {
   text-align: center;

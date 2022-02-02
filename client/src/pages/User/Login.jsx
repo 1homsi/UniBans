@@ -49,6 +49,7 @@ function Login(props) {
             value={values.username}
             error={errors.username ? true : false}
             onChange={onChange}
+            className="form_input"
           />
           <Form.Input
             label="Password"
@@ -58,6 +59,8 @@ function Login(props) {
             value={values.password}
             error={errors.password ? true : false}
             onChange={onChange}
+            className="form_input"
+
           />
           <Button type="submit" primary>
             Login
