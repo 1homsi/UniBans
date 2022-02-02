@@ -3,12 +3,12 @@ import { Button, Form } from "semantic-ui-react";
 import { useMutation } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 
-import { AuthContext } from "../../context/auth";
-import { useForm } from "../../util/hooks";
+import { AuthContext } from "../../../context/auth";
+import { useForm } from "../../../util/hooks";
 
-import "./styles/Login.scss";
+import "../styles/Login.scss";
 
-function Login(props) {
+function LoginMain(props) {
   const context = useContext(AuthContext);
   const [errors, setErrors] = useState({});
 
@@ -60,7 +60,6 @@ function Login(props) {
             error={errors.password ? true : false}
             onChange={onChange}
             className="form_input"
-
           />
           <Button type="submit" primary>
             Login
@@ -92,4 +91,16 @@ const LOGIN_USER = gql`
   }
 `;
 
-export default Login;
+export class Login extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+
+  render() {
+    return (
+      <>
+        <LoginMain></LoginMain>
+      </>
+    );
+  }
+}

@@ -22,46 +22,6 @@
 
 UniBans aims to be a simple and easy website for university students from all around the world to communincate and help each other. **:p**
 
-## Getting Started
-
-Follow the steps below to get started.
-
-### Prerequisites
-
-Before you run the project you will need to install:
-
-- <h5><strong>nodejs</strong></h5>
-- <h5><strong>MongoDb</strong></h5>
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/1homsi/UniBans.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-3. Run the server
-   ```sh
-   npm dev
-   ```
-4. Navigate to client floder
-   ```sh
-   cd client
-   ```
-5. Install NPM packages
-
-   ```sh
-   npm install
-   ```
-
-6. Run the client
-   ```sh
-   npm dev
-   ```
-
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.

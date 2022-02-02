@@ -3,14 +3,15 @@ import { Button, Form } from "semantic-ui-react";
 import { useMutation } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 
-import { AuthContext } from "../../context/auth";
-import { useForm } from "../../util/hooks";
+import { AuthContext } from "../../../context/auth";
+import { useForm } from "../../../util/hooks";
 
-import "./styles/Register.scss";
+import "../styles/Register.scss";
 
-function Register(props) {
+const RegisterMain = (props) => {
   const context = useContext(AuthContext);
   const [errors, setErrors] = useState({});
+  const [isSpace, setIsSpace] = useState(false);
 
   const { onChange, onSubmit, values } = useForm(registerUser, {
     username: "",
@@ -31,7 +32,14 @@ function Register(props) {
   });
 
   function registerUser() {
-    addUser();
+    if (values.username.indexOf(" ") >= 0) {
+      console.log("Space Found");
+      setIsSpace(true);
+      return false;
+    } else {
+      setIsSpace(false);
+      addUser();
+    }
   }
 
   return (
@@ -87,9 +95,10 @@ function Register(props) {
           </ul>
         </div>
       )}
+      {isSpace ? <p className="ui error message">Space Found</p> : <></>}
     </div>
   );
-}
+};
 
 const REGISTER_USER = gql`
   mutation register(
@@ -115,4 +124,16 @@ const REGISTER_USER = gql`
   }
 `;
 
-export default Register;
+export class Register extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+
+  render() {
+    return (
+      <>
+        <RegisterMain></RegisterMain>
+      </>
+    );
+  }
+}

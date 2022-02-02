@@ -5,9 +5,37 @@
 //Note: The property body is a common property so it should be in App.scss
 //Removed it from Login.scss
 //The color will be applied to the entire website
-body {
-  background: linear-gradient(to bottom right, #1c79dc, #d3d3d3);
-}
+// body {
+//   // background: linear-gradient(to bottom right, #1c79dc, #d3d3d3)
+//   background: rgb(111, 41, 201);
+//   background: linear-gradient(
+//     90deg,
+//     rgba(111, 41, 201, 1) 0%,
+//     rgba(232, 12, 206, 1) 62%,
+//     rgba(255, 0, 74, 1) 100%
+//   );
+// }
+
+// body {
+//   animation: animateBg 40s linear infinite;
+//   background-image: linear-gradient(
+//     90deg,
+//     #71c66c,
+//     #ff8000,
+//     #db5779,
+//     #71c66c,
+//     #ff8000
+//   );
+//   background-size: 400% 100%;
+// }
+// @keyframes animateBg {
+//   0% {
+//     background-position: 0% 0%;
+//   }
+//   100% {
+//     background-position: 100% 0%;
+//   }
+// }
 
 .page-title {
   display: block !important;
