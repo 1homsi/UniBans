@@ -13,6 +13,9 @@ function LeftSideBar() {
         <Link href="#">Placeholder</Link>
         <Link href="#">Placeholder</Link>
         <Link href="#">Placeholder</Link>
+        <Link href="#">Placeholder</Link>
+        <Link href="#">Placeholder</Link>
+        <Link href="#">Placeholder</Link>
       </div>
     </div>
   );
