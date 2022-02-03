@@ -1,8 +1,9 @@
 .modalBackground {
+  z-index: 5;
   width: 40%;
   margin-left: 15vw;
   margin-right: 15vw;
-  height: 85%;
+  height: 100%;
   background-color: white;
   position: fixed;
   display: flex;

@@ -6,8 +6,12 @@
   z-index: 1;
   top: 0;
   left: 0;
+<<<<<<< Updated upstream
   background-color:#1f2b3b;
   overflow-x: hidden;
+=======
+  background-color: #111;
+>>>>>>> Stashed changes
   padding-top: 20px;
   margin-top: 150px;
   border-top-right-radius: 70px;
@@ -81,7 +85,7 @@
   height: 43px;
   margin: 7px;
   border: none;
-  background-color: cornflowerblue;
+  background: linear-gradient(to top right, #8162ce, #f54ba5);
   color: white;
   border-radius: 8px;
   font-size: 20px;

@@ -1,5 +1,5 @@
 import React from "react";
-import MenuBar from "../../components/Menu/MenuBar";
+// import MenuBar from "../../components/Menu/MenuBar";
 import CustomModal from "../../components/Modal/CustomModal";
 import { LeftSideBar, RightSideBar } from "../../components/SideBar/SideNav";
 import { Login, Register } from "../User/Index";

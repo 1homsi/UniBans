@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Side.scss";
 import { AuthContext } from "../../context/auth";
-import { Login, Register } from "../../pages/User/Index";
-import CustomModal from "../Modal/CustomModal";
 
 function LeftSideBar() {
   return (
@@ -35,6 +33,7 @@ function RightSideBar({ IsOpenLogin, IsOpenRegister }) {
                 0,
                 2
               )}.svg`}
+              alt=""
             />
             <h1 className="UserName">{user.username}</h1>
             <button className="Userbutton" onClick={logout}>
@@ -46,6 +45,7 @@ function RightSideBar({ IsOpenLogin, IsOpenRegister }) {
             <img
               className="UserImage"
               src={`https://avatars.dicebear.com/api/initials/G.svg`}
+              alt=""
             />
             <div className="UserControlls">
               <button className="Userbutton" onClick={() => IsOpenLogin(true)}>
