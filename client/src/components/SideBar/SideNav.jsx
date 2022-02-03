@@ -6,10 +6,10 @@ function LeftSideBar() {
   return (
     <div>
       <div className="sidenav">
-        <Link href="#about">About</Link>
-        <Link href="#services">Services</Link>
-        <Link href="#clients">Clients</Link>
-        <Link href="#contact">Contact</Link>
+        <Link href="#">Placeholder</Link>
+        <Link href="#">Placeholder</Link>
+        <Link href="#">Placeholder</Link>
+        <Link href="#">Placeholder</Link>
       </div>
     </div>
   );
@@ -19,10 +19,10 @@ function RightSideBar() {
   return (
     <div>
       <div className="RightSideNav">
-        <Link href="#about">About</Link>
-        <Link href="#services">Services</Link>
-        <Link href="#clients">Clients</Link>
-        <Link href="#contact">Contact</Link>
+        <Link href="#">Placeholder</Link>
+        <Link href="#s">Placeholder</Link>
+        <Link href="#">Placeholde</Link>
+        <Link href="#">Placeholder</Link>
       </div>
     </div>
   );

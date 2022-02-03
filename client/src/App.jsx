@@ -8,7 +8,6 @@ import "./Styles/App.scss";
 import { AuthProvider } from "./context/auth";
 import AuthRoute from "./util/AuthRoute";
 
-import MenuBar from "./components/Menu/MenuBar";
 import Main from "./pages/Main/Main";
 import { Login, Register } from "./pages/User/Index";
 
