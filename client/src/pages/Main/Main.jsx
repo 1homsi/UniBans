@@ -5,23 +5,36 @@ import { LeftSideBar, RightSideBar } from "../../components/SideBar/SideNav";
 import { Login, Register } from "../User/Index";
 
 function MainApp() {
-  const [isOpen, setModalOpen] = React.useState(false);
+  const [isOpenLogin, setModalOpenLogin] = React.useState(false);
+  const [isOpenRegister, setModalOpenRegister] = React.useState(false);
+
   return (
     <div>
       <LeftSideBar />
-      <MenuBar></MenuBar>
-      <button onClick={() => setModalOpen(true)}>Open</button>
-      {isOpen && (
+      {isOpenLogin && (
         <CustomModal
-          setOpenModal={setModalOpen}
+          setOpenModal={setModalOpenLogin}
           Children={
             <>
-              <Login></Login>
+              <Login isDone={setModalOpenLogin}></Login>
             </>
           }
         />
       )}
-      <RightSideBar />
+      {isOpenRegister && (
+        <CustomModal
+          setOpenModal={setModalOpenRegister}
+          Children={
+            <>
+              <Register></Register>
+            </>
+          }
+        />
+      )}
+      <RightSideBar
+        IsOpenLogin={setModalOpenLogin}
+        IsOpenRegister={setModalOpenRegister}
+      />
     </div>
   );
 }
