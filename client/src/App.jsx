@@ -10,12 +10,14 @@ import AuthRoute from "./util/AuthRoute";
 
 import Main from "./pages/Main/Main";
 import { Login, Register } from "./pages/User/Index";
+import About from "./pages/About/About";
 
 function MainApp() {
   return (
     <AuthProvider>
       <Router>
         <Container>
+          <Route path="/about" component={About} />
           <Route exact path="/" component={Main} />
           <AuthRoute exact path="/login" component={Login} />
           <AuthRoute exact path="/register" component={Register} />
