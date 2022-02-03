@@ -8,7 +8,6 @@ import { setContext } from "apollo-link-context";
 import "./Styles/index.scss";
 
 const httpLink = createHttpLink({
-  //Server connection url
   uri: "http://localhost:5000",
 });
 
