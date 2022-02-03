@@ -2,15 +2,14 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { Container } from "semantic-ui-react";
-import "animate.css";
 import "semantic-ui-css/semantic.min.css";
-import "./App.scss";
+import "./Styles/App.scss";
 
 import { AuthProvider } from "./context/auth";
 import AuthRoute from "./util/AuthRoute";
 
 import MenuBar from "./components/Menu/MenuBar";
-import Home from "./pages/Home";
+import Main from "./pages/Main/Main";
 import { Login, Register } from "./pages/User/Index";
 
 function MainApp() {
@@ -18,8 +17,7 @@ function MainApp() {
     <AuthProvider>
       <Router>
         <Container>
-          <MenuBar />
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Main} />
           <AuthRoute exact path="/login" component={Login} />
           <AuthRoute exact path="/register" component={Register} />
         </Container>
@@ -32,7 +30,7 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <MainApp></MainApp>
+        <MainApp />
       </>
     );
   }
