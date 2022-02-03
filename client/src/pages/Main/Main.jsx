@@ -4,7 +4,7 @@ import CustomModal from "../../components/Modal/CustomModal";
 import { LeftSideBar, RightSideBar } from "../../components/SideBar/SideNav";
 import { Login, Register } from "../User/Index";
 
-function MainApp() {
+function Main({ Content }) {
   const [isOpenLogin, setModalOpenLogin] = React.useState(false);
   const [isOpenRegister, setModalOpenRegister] = React.useState(false);
 
@@ -31,6 +31,7 @@ function MainApp() {
           }
         />
       )}
+      <div>{Content}</div>
       <RightSideBar
         IsOpenLogin={setModalOpenLogin}
         IsOpenRegister={setModalOpenRegister}
@@ -39,8 +40,4 @@ function MainApp() {
   );
 }
 
-export default class Main extends React.Component {
-  render() {
-    return <MainApp />;
-  }
-}
+export default Main;

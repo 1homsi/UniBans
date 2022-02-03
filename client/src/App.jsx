@@ -6,11 +6,12 @@ import "semantic-ui-css/semantic.min.css";
 import "./Styles/App.scss";
 
 import { AuthProvider } from "./context/auth";
-import AuthRoute from "./util/AuthRoute";
+// import AuthRoute from "./util/AuthRoute";
 
 import Main from "./pages/Main/Main";
-import { Login, Register } from "./pages/User/Index";
+// import { Login, Register } from "./pages/User/Index";
 import About from "./pages/About/About";
+import Home from "./pages/Home/Home";
 
 function MainApp() {
   return (
@@ -18,9 +19,12 @@ function MainApp() {
       <Router>
         <Container>
           <Route path="/about" component={About} />
-          <Route exact path="/" component={Main} />
-          <AuthRoute exact path="/login" component={Login} />
-          <AuthRoute exact path="/register" component={Register} />
+          <Route exact path="/">
+            <Main Content={<Home />} />
+          </Route>
+
+          {/* <AuthRoute exact path="/login" component={Login} /> */}
+          {/* <AuthRoute exact path="/register" component={Register} /> */}
         </Container>
       </Router>
     </AuthProvider>
