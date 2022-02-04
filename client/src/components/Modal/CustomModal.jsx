@@ -1,7 +1,7 @@
 import React from "react";
 import "./Modal.scss";
 
-function CustomModal({ isopen, setOpenModal, Children }) {
+function CustomModal({ isopen, setOpenModal, Children, title }) {
   return (
     <div className="modalBackground">
       <div className="modalContainer">
@@ -15,7 +15,7 @@ function CustomModal({ isopen, setOpenModal, Children }) {
           </button>
         </div>
         <div className="title">
-          <h1>Title</h1>
+          <h1>{title}</h1>
         </div>
         <div className="body">{Children}</div>
         <div className="footer">

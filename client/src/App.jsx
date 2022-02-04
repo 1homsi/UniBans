@@ -20,7 +20,9 @@ function MainApp() {
     <AuthProvider>
       <Router>
         <Container>
-          <Route path="/about" component={About} />
+          <Route path="/about">
+            <Main Content={<About />} />
+          </Route>
           <Route exact path="/">
             <Main Content={<Home />} />
           </Route>

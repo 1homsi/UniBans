@@ -1,5 +1,4 @@
 import React from "react";
-// import MenuBar from "../../components/Menu/MenuBar";
 import CustomModal from "../../components/Modal/CustomModal";
 import { LeftSideBar, RightSideBar } from "../../components/SideBar/SideNav";
 import { Login, Register } from "../User/Index";
@@ -14,6 +13,7 @@ function Main({ Content }) {
       {isOpenLogin && (
         <CustomModal
           setOpenModal={setModalOpenLogin}
+          title="Login"
           Children={
             <>
               <Login isDone={setModalOpenLogin}></Login>
@@ -24,6 +24,7 @@ function Main({ Content }) {
       {isOpenRegister && (
         <CustomModal
           setOpenModal={setModalOpenRegister}
+          title="Register"
           Children={
             <>
               <Register></Register>

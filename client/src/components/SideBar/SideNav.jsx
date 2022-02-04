@@ -7,13 +7,13 @@ function LeftSideBar() {
   return (
     <div>
       <div className="sidenav">
-        <Link href="#">Placeholder</Link>
-        <Link href="#">Placeholder</Link>
-        <Link href="#">Placeholder</Link>
-        <Link href="#">Placeholder</Link>
-        <Link href="#">Placeholder</Link>
-        <Link href="#">Placeholder</Link>
-        <Link href="#">Placeholder</Link>
+        <Link to="/about">About</Link>
+        <Link to="/profile">Profile (Testing) </Link>
+        <Link to="/">Placeholder</Link>
+        {/* <Link to="/">Placeholder</Link>
+        <Link to="/">Placeholder</Link>
+        <Link to="/">Placeholder</Link>
+        <Link to="/">Placeholder</Link> */}
       </div>
     </div>
   );
@@ -48,12 +48,21 @@ function RightSideBar({ IsOpenLogin, IsOpenRegister }) {
               alt=""
             />
             <div className="UserControlls">
-              <button className="Userbutton" onClick={() => IsOpenLogin(true)}>
+              <button
+                className="Userbutton"
+                onClick={() => {
+                  IsOpenLogin(true);
+                  IsOpenRegister(false);
+                }}
+              >
                 Login
               </button>
               <button
                 className="Userbutton"
-                onClick={() => IsOpenRegister(true)}
+                onClick={() => {
+                  IsOpenLogin(false);
+                  IsOpenRegister(true);
+                }}
               >
                 Register
               </button>

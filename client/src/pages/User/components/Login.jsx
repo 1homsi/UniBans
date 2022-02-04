@@ -40,7 +40,7 @@ function LoginMain(props) {
           noValidate
           className={loading ? "loading" : ""}
         >
-          <h1>Login</h1>
+          {/* <h1>Login</h1> */}
           <Form.Input
             label="Username"
             placeholder="Username.."
