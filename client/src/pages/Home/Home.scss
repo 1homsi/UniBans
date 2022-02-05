@@ -1,9 +1,3 @@
-.Content {
-  color: black;
-}
-*{
-  color: beige;
-}
 #div-trans{
   background-color: #243245;
   // border: solid rgb(66, 89, 221);
@@ -36,9 +30,33 @@
 }
 .options option{
   color: beige;
-  background: yellowgreen;
+  background:  #243245;
   border: none;
   &:hover{
-    background: black;
+    border-left: solid 2px #4c6ef5;
   }
+}
+.options {
+  color: beige;
+  background: transparent;
+  border: none;
+  display: inline-block;
+  // i{
+  //   color: beige;
+  //   &:hover{
+  //     color:#4c6ef5;
+  //   }
+  // }
+  &:hover{
+    color: #4c6ef5;
+    i{
+      color: #4c6ef5;
+    }
+  }
+}
+.main{
+  margin-top: 20px;
+}
+.options i{
+  margin-left: 15px;
 }
