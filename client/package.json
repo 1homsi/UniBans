@@ -8,6 +8,7 @@
     "apollo-client": "^2.6.2",
     "apollo-link-context": "^1.0.18",
     "apollo-link-http": "^1.5.14",
+    "font-awesome": "^4.7.0",
     "framer-motion": "^6.2.3",
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.1",

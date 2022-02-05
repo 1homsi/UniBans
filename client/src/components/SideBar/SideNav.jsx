@@ -10,10 +10,6 @@ function LeftSideBar() {
         <Link to="/about">About</Link>
         <Link to="/profile">Profile (Testing) </Link>
         <Link to="/">Placeholder</Link>
-        {/* <Link to="/">Placeholder</Link>
-        <Link to="/">Placeholder</Link>
-        <Link to="/">Placeholder</Link>
-        <Link to="/">Placeholder</Link> */}
       </div>
     </div>
   );
