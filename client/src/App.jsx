@@ -14,6 +14,8 @@ import { Login, Register } from "./pages/User/Index";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Profile from "./pages/User/UserProfile/Profile";
+import NonAuthMain from "./pages/Main/NonAuthMain";
+
 import { AuthContext } from "./context/auth";
 
 function AuthApp() {
@@ -37,8 +39,8 @@ function AuthApp() {
 function NonAuthApp() {
   return (
     <>
-      <h1>Hello world Login</h1>
       <Router>
+        <Route exact path="/" component={NonAuthMain} />
         <AuthRoute exact path="/login" component={Login} />
         <AuthRoute exact path="/register" component={Register} />
       </Router>

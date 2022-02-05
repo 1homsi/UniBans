@@ -19,15 +19,18 @@ function CustomModal({ isopen, setOpenModal, Children, title }) {
         </div>
         <div className="body">{Children}</div>
         <div className="footer">
-          <button
-            onClick={() => {
-              setOpenModal(false);
-            }}
-            id="cancelBtn"
-          >
-            Cancel
-          </button>
-          <button>Continue</button>
+          <center>
+            <button
+              onClick={() => {
+                setOpenModal(false);
+              }}
+              id="cancelBtn"
+            >
+              Cancel
+            </button>
+          </center>
+
+          {/* <button>Continue</button> */}
         </div>
       </div>
     </div>
