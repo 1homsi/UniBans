@@ -1,19 +1,34 @@
+// import React, { useContext } from 'react';
+// import { Route, Navigate, Routes } from 'react-router-dom';
+
+// import { AuthContext } from '../context/auth';
+
+// function AuthRoute({ component: Component, ...rest }) {
+//   const { user } = useContext(AuthContext);
+
+//   return (
+//     <Routes>
+//       <Route
+//         {...rest}
+//         render={(props) =>
+//           user ? <Navigate to="/" /> : <Component {...props} />
+//         }
+//       />
+//     </Routes>
+
+//   );
+// }
+
+// export default AuthRoute;
+
+
 import React, { useContext } from 'react';
-import { Route, Redirect } from 'react-router-dom';
-
 import { AuthContext } from '../context/auth';
+import { Navigate, Outlet, Route } from 'react-router-dom';
 
-function AuthRoute({ component: Component, ...rest }) {
+const AuthRoute = () => {
   const { user } = useContext(AuthContext);
-
-  return (
-    <Route
-      {...rest}
-      render={(props) =>
-        user ? <Redirect to="/" /> : <Component {...props} />
-      }
-    />
-  );
+  return user ? <Route element={<Navigate to="/" />} /> : <Outlet />;
 }
 
 export default AuthRoute;

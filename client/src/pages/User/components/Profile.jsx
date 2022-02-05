@@ -1,6 +1,6 @@
 import React from "react";
-import "./Profile.scss";
 import { AuthContext } from "../../../context/auth";
+import "../styles/Profile.scss";
 
 function Profile() {
   const { user } = React.useContext(AuthContext);
@@ -52,4 +52,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export { Profile };

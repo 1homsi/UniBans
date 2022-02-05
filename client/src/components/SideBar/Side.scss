@@ -36,8 +36,10 @@
 }
 
 .RightSideNav {
+  text-align: center;
   color: white;
-  height: 100%;
+  border-radius: 0px 0px 0px 80px;
+  height: 80%;
   width: 15vw;
   position: fixed;
   z-index: 1;
@@ -49,15 +51,15 @@
 }
 
 .RightSideNav a {
-  padding: 6px 8px 6px 16px;
+  padding: 20px 8px 20px 8px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 20px;
+  color: #c2b2b2;
   display: block;
 }
 
 .RightSideNav a:hover {
-  color: #f1f1f1;
+  color: #f1c0c0;
 }
 
 .UserImage {
@@ -84,4 +86,19 @@
   border-radius: 8px;
   font-size: 20px;
   cursor: pointer;
+}
+
+.UserContainer {
+  display: flex;
+  i {
+    margin-top: 12px;
+    margin-right: 40px;
+    width: 15%;
+    &:hover {
+      color: #ac5757;
+    }
+  }
+  h1 {
+    width: 140%;
+  }
 }

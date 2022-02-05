@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Side.scss";
 import { AuthContext } from "../../context/auth";
 
@@ -8,7 +8,6 @@ function LeftSideBar() {
     <div>
       <div className="sidenav">
         <Link to="/about">About</Link>
-        <Link to="/profile">Profile (Testing) </Link>
         <Link to="/">Placeholder</Link>
       </div>
     </div>
@@ -17,6 +16,7 @@ function LeftSideBar() {
 
 function RightSideBar({ IsOpenLogin, IsOpenRegister }) {
   const { user, logout } = React.useContext(AuthContext);
+  const nav = useNavigate();
 
   return (
     <div>
@@ -27,43 +27,27 @@ function RightSideBar({ IsOpenLogin, IsOpenRegister }) {
               className="UserImage"
               src={`https://avatars.dicebear.com/api/initials/${user.username.substring(
                 0,
-                2
+                1
               )}.svg`}
               alt=""
             />
-            <h1 className="UserName">{user.username}</h1>
+            <div className="UserContainer">
+              <h1 className="UserName">@{user.username}</h1>
+              <i
+                class="far fa-copy"
+                onClick={() => {
+                  navigator.clipboard.writeText(`@${user.username}`);
+                }}
+              ></i>
+            </div>
+
+            <Link to="/profile">view Profile</Link>
             <button className="Userbutton" onClick={logout}>
               Logout
             </button>
           </>
         ) : (
-          <>
-            <img
-              className="UserImage"
-              src={`https://avatars.dicebear.com/api/initials/G.svg`}
-              alt=""
-            />
-            <div className="UserControlls">
-              <button
-                className="Userbutton"
-                onClick={() => {
-                  IsOpenLogin(true);
-                  IsOpenRegister(false);
-                }}
-              >
-                Login
-              </button>
-              <button
-                className="Userbutton"
-                onClick={() => {
-                  IsOpenLogin(false);
-                  IsOpenRegister(true);
-                }}
-              >
-                Register
-              </button>
-            </div>
-          </>
+          <>{nav("/login")}</>
         )}
       </div>
     </div>

@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 
 import { Container } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
@@ -10,40 +15,47 @@ import AuthRoute from "./util/AuthRoute";
 import PrivateRoute from "./util/PrivateRoute";
 
 import Main from "./pages/Main/Main";
-import { Login, Register } from "./pages/User/Index";
+import { Login, Register, Profile } from "./pages/User/Index";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
-import Profile from "./pages/User/UserProfile/Profile";
 import NonAuthMain from "./pages/Main/NonAuthMain";
 
 import { AuthContext } from "./context/auth";
 
 function AuthApp() {
   return (
-    <Router>
-      <Container>
-        <Route path="/about">
-          <Main Content={<About />} />
+    <>
+      <Routes>
+        <Route path="/about" element={<Main Content={<About />} />} />
+        <Route exact path="/" element={<Main Content={<Home />} />} />
+        <Route exact path="/profile" element={<PrivateRoute />}>
+          <Route
+            exact
+            path="/profile"
+            element={<Main Content={<Profile />} />}
+          />
         </Route>
-        <Route exact path="/">
-          <Main Content={<Home />} />
-        </Route>
-        <PrivateRoute path="/profile">
-          <Main Content={<Profile />} />
-        </PrivateRoute>
-      </Container>
-    </Router>
+        <Route element={<Main Content={<Home />} />} />
+        <Route path="*" element={<Main Content={<Home />} />} />
+      </Routes>
+    </>
   );
 }
 
 function NonAuthApp() {
   return (
     <>
-      <Router>
-        <Route exact path="/" component={NonAuthMain} />
-        <AuthRoute exact path="/login" component={Login} />
-        <AuthRoute exact path="/register" component={Register} />
-      </Router>
+      <Routes>
+        <Route exact path="/" element={<NonAuthMain />} />
+        <Route element={<Navigate to="/" />} />
+        <Route exact path="/login" element={<AuthRoute />}>
+          <Route path="/login" element={<Login />} />
+        </Route>
+        <Route exact path="/register" element={<AuthRoute />}>
+          <Route path="/register" element={<Register />} />
+        </Route>
+        <Route path="*" element={<NonAuthMain />} />
+      </Routes>
     </>
   );
 }
@@ -57,7 +69,11 @@ export default class App extends React.Component {
   render() {
     return (
       <AuthProvider>
-        <MainApp />
+        <Container>
+          <Router>
+            <MainApp />
+          </Router>
+        </Container>
       </AuthProvider>
     );
   }

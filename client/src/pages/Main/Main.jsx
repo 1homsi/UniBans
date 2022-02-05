@@ -1,16 +1,16 @@
 import React from "react";
-import CustomModal from "../../components/Modal/CustomModal";
+// import CustomModal from "../../components/Modal/CustomModal";
 import { LeftSideBar, RightSideBar } from "../../components/SideBar/SideNav";
-import { Login, Register } from "../User/Index";
+// import { Login, Register } from "../User/Index";
 
 function Main({ Content }) {
-  const [isOpenLogin, setModalOpenLogin] = React.useState(false);
-  const [isOpenRegister, setModalOpenRegister] = React.useState(false);
+  // const [isOpenLogin, setModalOpenLogin] = React.useState(false);
+  // const [isOpenRegister, setModalOpenRegister] = React.useState(false);
 
   return (
     <div>
       <LeftSideBar />
-      {isOpenLogin && (
+      {/* {isOpenLogin && (
         <CustomModal
           setOpenModal={setModalOpenLogin}
           title="Login"
@@ -31,11 +31,11 @@ function Main({ Content }) {
             </>
           }
         />
-      )}
+      )} */}
       <div>{Content}</div>
       <RightSideBar
-        IsOpenLogin={setModalOpenLogin}
-        IsOpenRegister={setModalOpenRegister}
+      // IsOpenLogin={setModalOpenLogin}
+      // IsOpenRegister={setModalOpenRegister}
       />
     </div>
   );

@@ -6,12 +6,16 @@ import gql from "graphql-tag";
 import { AuthContext } from "../../../context/auth";
 import { useForm } from "../../../util/hooks";
 
+import { useNavigate } from "react-router-dom";
+
 import "../styles/Register.scss";
 
 const RegisterMain = (props) => {
+  const nav = useNavigate();
   const context = useContext(AuthContext);
   const [errors, setErrors] = useState({});
   const [isSpace, setIsSpace] = useState(false);
+  const [numAsFirst, setNumAsFirst] = useState(false);
 
   const { onChange, onSubmit, values } = useForm(registerUser, {
     username: "",
@@ -23,7 +27,7 @@ const RegisterMain = (props) => {
   const [addUser, { loading }] = useMutation(REGISTER_USER, {
     update(_, { data: { register: userData } }) {
       context.login(userData);
-      props.history.push("/");
+      nav("/");
     },
     onError(err) {
       setErrors(err.graphQLErrors[0].extensions.exception.errors);
@@ -33,19 +37,22 @@ const RegisterMain = (props) => {
 
   function registerUser() {
     if (values.username.indexOf(" ") >= 0) {
-      console.log("Space Found");
       setIsSpace(true);
       return false;
-    } else {
-      setIsSpace(false);
-      addUser();
     }
+    if (!isNaN(values.username.charAt(0))) {
+      setNumAsFirst(true);
+      return false;
+    }
+
+    setIsSpace(false);
+    setNumAsFirst(false);
+    addUser();
   }
 
   return (
     <div className="form-container">
       <Form onSubmit={onSubmit} noValidate className={loading ? "loading" : ""}>
-        {/* <h1>Register</h1> */}
         <Form.Input
           label="Username"
           placeholder="Username.."
@@ -96,6 +103,11 @@ const RegisterMain = (props) => {
         </div>
       )}
       {isSpace ? <p className="ui error message">Space Found</p> : <></>}
+      {numAsFirst ? (
+        <p className="ui error message">You cant user a number at the start</p>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
