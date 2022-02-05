@@ -5,10 +5,12 @@ import gql from "graphql-tag";
 
 import { AuthContext } from "../../../context/auth";
 import { useForm } from "../../../util/hooks";
+import { useHistory } from "react-router-dom";
 
 import "../styles/Login.scss";
 
 function LoginMain(props) {
+  const PageHistory = useHistory();
   const context = useContext(AuthContext);
   const [errors, setErrors] = useState({});
 
@@ -20,7 +22,7 @@ function LoginMain(props) {
   const [loginUser, { loading }] = useMutation(LOGIN_USER, {
     update(_, { data: { login: userData } }) {
       context.login(userData);
-      props.history.push("/");
+      PageHistory.goBack();
     },
     onError(err) {
       setErrors(err.graphQLErrors[0].extensions.exception.errors);
