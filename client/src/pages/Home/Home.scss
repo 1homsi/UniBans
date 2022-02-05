@@ -1,3 +1,44 @@
 .Content {
   color: black;
 }
+*{
+  color: beige;
+}
+#div-trans{
+  background-color: #243245;
+  // border: solid rgb(66, 89, 221);
+  border: solid 2px #3d506a;;
+
+}
+.notes{
+  padding: 10px;
+  border-radius: 30px 8px 8px 8px;
+  margin: 10px;
+}
+#div-blue{
+  background: #4c6ef5;
+  border: 2px solid #3d506a;
+}
+#div-red{
+  background-image: linear-gradient(90deg, #ec2764 0%, #6a0a64 100%);
+  padding: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.options{
+  color: beige;
+  background: transparent;
+  border: none;
+
+}
+.find-threads{
+  width: 110px;
+}
+.options option{
+  color: beige;
+  background: yellowgreen;
+  border: none;
+  &:hover{
+    background: black;
+  }
+}
