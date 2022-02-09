@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 //Css and Ui Libraries
-import { Container } from "semantic-ui-react";
+// import { Container } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import "./Styles/App.scss";
 
