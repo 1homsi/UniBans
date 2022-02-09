@@ -10,7 +10,7 @@ import {
 
 //Css and Ui Libraries
 // import { Container } from "semantic-ui-react";
-import "semantic-ui-css/semantic.min.css";
+// import "semantic-ui-css/semantic.min.css";
 import "./Styles/App.scss";
 
 //Private Routes
