@@ -27,9 +27,7 @@ const client = new ApolloClient({
 });
 
 export default (
-  <div className="MainContent">
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
-  </div>
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>
 );
