@@ -36,6 +36,7 @@ function LoginMain(props) {
 
   return (
     <div className="body">
+      <h1 id="title">LogIn</h1>
       <div className="form-container">
         <Form
           onSubmit={onSubmit}

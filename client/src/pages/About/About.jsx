@@ -29,7 +29,7 @@ function About() {
                 <i className="fab fa-facebook-f"></i>
               </a>
               <a href="/">
-                <i className="fab fa-twitter"></i>
+                <i className="fab fa-discord"></i>
               </a>
               <a href="/">
                 <i className="fab fa-instagram"></i>
@@ -45,4 +45,4 @@ function About() {
   );
 }
 
-export default About;
+export { About };

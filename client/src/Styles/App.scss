@@ -1,6 +1,7 @@
 body {
+  overflow: hidden;
   background-color: #171e29;
-  color: rgb(163, 154, 154);
+  color: rgb(184, 147, 147);
 }
 
 .page-title {
@@ -11,11 +12,5 @@ body {
 }
 
 .form-container {
-  width: 400px;
   margin: auto;
 }
-
-// .ui.teal.button:focus,
-// .ui.teal.buttons .button:focus {
-//   background-color: #00b5ad;
-// }

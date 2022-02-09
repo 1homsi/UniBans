@@ -14,7 +14,7 @@ function LeftSideBar() {
   );
 }
 
-function RightSideBar({ IsOpenLogin, IsOpenRegister }) {
+function RightSideBar() {
   const { user, logout } = React.useContext(AuthContext);
   const nav = useNavigate();
 

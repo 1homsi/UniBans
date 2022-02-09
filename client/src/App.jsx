@@ -1,4 +1,6 @@
 import React from "react";
+
+//Router and router elements
 import {
   BrowserRouter as Router,
   Route,
@@ -6,21 +8,25 @@ import {
   Navigate,
 } from "react-router-dom";
 
+//Css and Ui Libraries
 import { Container } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import "./Styles/App.scss";
 
-import { AuthProvider } from "./context/auth";
+//Private Routes
 import AuthRoute from "./util/AuthRoute";
 import PrivateRoute from "./util/PrivateRoute";
 
-import Main from "./pages/Main/Main";
+//Route imports
 import { Login, Register, Profile } from "./pages/User/Index";
-import About from "./pages/About/About";
-import Home from "./pages/Home/Home";
+import { Home, About } from "./Routes/AuthRoutes";
+
+//Main Contents import
+import Main from "./pages/Main/Main";
 import NonAuthMain from "./pages/Main/NonAuthMain";
 
-import { AuthContext } from "./context/auth";
+//User Auth import
+import { AuthProvider, AuthContext } from "./context/auth";
 
 function AuthApp() {
   return (
@@ -60,6 +66,8 @@ function NonAuthApp() {
   );
 }
 
+//Component that checks if user is logged in if yes it will show them the Homepage
+//if not it will redirect the user to a basic page
 const MainApp = () => {
   const { user } = React.useContext(AuthContext);
   return <>{user ? <AuthApp /> : <NonAuthApp />}</>;

@@ -23,23 +23,14 @@ function Profile() {
             <div className="container">
               <div className="content">
                 <div className="grid-2">
-                  <button className="color-b circule">
-                    <i className="fab fa-dribbble fa-2x"></i>
-                  </button>
                   <h2 className="title-2">Kingdom</h2>
                   <p className="followers">Kingdom Name</p>
                 </div>
                 <div className="grid-2">
-                  <button className="color-c circule">
-                    <i className="fab fa-behance fa-2x"></i>
-                  </button>
                   <h2 className="title-2">Rank</h2>
                   <p className="followers">rank number</p>
                 </div>
                 <div className="grid-2">
-                  <button className="color-d circule">
-                    <i className="fab fa-github-alt fa-2x"></i>
-                  </button>
                   <h2 className="title-2">points</h2>
                   <p className="followers">points</p>
                 </div>
