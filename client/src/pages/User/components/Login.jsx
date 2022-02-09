@@ -36,7 +36,7 @@ function LoginMain(props) {
 
   return (
     <div className="body">
-      <h1 id="title">LogIn</h1>
+      <h1 id="title">Login</h1>
       <div className="form-container">
         <Form
           onSubmit={onSubmit}
@@ -44,9 +44,8 @@ function LoginMain(props) {
           className={loading ? "loading" : ""}
           id="login-form"
         >
-          {/* <h1>Login</h1> */}
+          <lable>Username</lable>
           <Form.Input
-            label="Username"
             placeholder="Username.."
             name="username"
             type="text"

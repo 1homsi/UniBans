@@ -81,11 +81,9 @@ export default class App extends React.Component {
   render() {
     return (
       <AuthProvider>
-        {/* <Container> */}
         <Router>
           <MainApp />
         </Router>
-        {/* </Container> */}
       </AuthProvider>
     );
   }

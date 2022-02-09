@@ -10,28 +10,6 @@ function Main({ Content }) {
   return (
     <div>
       <LeftSideBar />
-      {/* {isOpenLogin && (
-        <CustomModal
-          setOpenModal={setModalOpenLogin}
-          title="Login"
-          Children={
-            <>
-              <Login isDone={setModalOpenLogin}></Login>
-            </>
-          }
-        />
-      )}
-      {isOpenRegister && (
-        <CustomModal
-          setOpenModal={setModalOpenRegister}
-          title="Register"
-          Children={
-            <>
-              <Register></Register>
-            </>
-          }
-        />
-      )} */}
       <div>{Content}</div>
       <RightSideBar
       // IsOpenLogin={setModalOpenLogin}
