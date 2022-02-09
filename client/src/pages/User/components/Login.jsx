@@ -42,6 +42,7 @@ function LoginMain(props) {
           onSubmit={onSubmit}
           noValidate
           className={loading ? "loading" : ""}
+          id="login-form"
         >
           {/* <h1>Login</h1> */}
           <Form.Input
