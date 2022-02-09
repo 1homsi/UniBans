@@ -53,17 +53,19 @@ function AuthApp() {
 function NonAuthApp() {
   return (
     <>
-      <Routes>
-        <Route exact path="/" element={<NonAuthMain />} />
-        <Route element={<Navigate to="/" />} />
-        <Route exact path="/login" element={<AuthRoute />}>
-          <Route path="/login" element={<Login />} />
-        </Route>
-        <Route exact path="/register" element={<AuthRoute />}>
-          <Route path="/register" element={<Register />} />
-        </Route>
-        <Route path="*" element={<NonAuthMain />} />
-      </Routes>
+      <div className="MainContentNonAuth">
+        <Routes>
+          <Route exact path="/" element={<NonAuthMain />} />
+          <Route element={<Navigate to="/" />} />
+          <Route exact path="/login" element={<AuthRoute />}>
+            <Route path="/login" element={<Login />} />
+          </Route>
+          <Route exact path="/register" element={<AuthRoute />}>
+            <Route path="/register" element={<Register />} />
+          </Route>
+          <Route path="*" element={<NonAuthMain />} />
+        </Routes>
+      </div>
     </>
   );
 }
@@ -79,11 +81,11 @@ export default class App extends React.Component {
   render() {
     return (
       <AuthProvider>
-        <Container>
-          <Router>
-            <MainApp />
-          </Router>
-        </Container>
+        {/* <Container> */}
+        <Router>
+          <MainApp />
+        </Router>
+        {/* </Container> */}
       </AuthProvider>
     );
   }
