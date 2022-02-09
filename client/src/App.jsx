@@ -31,19 +31,21 @@ import { AuthProvider, AuthContext } from "./context/auth";
 function AuthApp() {
   return (
     <>
-      <Routes>
-        <Route path="/about" element={<Main Content={<About />} />} />
-        <Route exact path="/" element={<Main Content={<Home />} />} />
-        <Route exact path="/profile" element={<PrivateRoute />}>
-          <Route
-            exact
-            path="/profile"
-            element={<Main Content={<Profile />} />}
-          />
-        </Route>
-        <Route element={<Main Content={<Home />} />} />
-        <Route path="*" element={<Main Content={<Home />} />} />
-      </Routes>
+      <div className="MainContent">
+        <Routes>
+          <Route path="/about" element={<Main Content={<About />} />} />
+          <Route exact path="/" element={<Main Content={<Home />} />} />
+          <Route exact path="/profile" element={<PrivateRoute />}>
+            <Route
+              exact
+              path="/profile"
+              element={<Main Content={<Profile />} />}
+            />
+          </Route>
+          <Route element={<Main Content={<Home />} />} />
+          <Route path="*" element={<Main Content={<Home />} />} />
+        </Routes>
+      </div>
     </>
   );
 }
