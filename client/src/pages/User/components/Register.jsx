@@ -51,47 +51,50 @@ const RegisterMain = (props) => {
   }
 
   return (
+    <div>
+       <h1 id="title">Register</h1>
     <div className="form-container">
+     
       <Form onSubmit={onSubmit} noValidate className={loading ? "loading" : ""}>
-        <Form.Input
-          label="Username"
-          placeholder="Username.."
+        <input
+          placeholder="Username"
           name="username"
           type="text"
           value={values.username}
           error={errors.username ? true : false}
           onChange={onChange}
+          className="form_input"
         />
-        <Form.Input
-          label="Email"
-          placeholder="Email.."
+        <input
+          placeholder="Email"
           name="email"
           type="email"
           value={values.email}
           error={errors.email ? true : false}
           onChange={onChange}
+          className="form_input"
         />
-        <Form.Input
-          label="Password"
-          placeholder="Password.."
+        <input
+          placeholder="Password"
           name="password"
           type="password"
           value={values.password}
           error={errors.password ? true : false}
           onChange={onChange}
+          className="form_input"
         />
-        <Form.Input
-          label="Confirm Password"
-          placeholder="Confirm Password.."
+        <input
+          placeholder="Confirm Password"
           name="confirmPassword"
           type="password"
           value={values.confirmPassword}
           error={errors.confirmPassword ? true : false}
           onChange={onChange}
+          className="form_input"
         />
-        <Button type="submit" primary>
+        <button type="submit" id="submit_btn">
           Register
-        </Button>
+        </button>
       </Form>
       {Object.keys(errors).length > 0 && (
         <div className="ui error message">
@@ -108,6 +111,7 @@ const RegisterMain = (props) => {
       ) : (
         <></>
       )}
+    </div>
     </div>
   );
 };

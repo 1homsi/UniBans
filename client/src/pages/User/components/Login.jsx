@@ -54,9 +54,8 @@ function LoginMain(props) {
             onChange={onChange}
             className="form_input"
           />
-          <Form.Input
-            label="Password"
-            placeholder="Password.."
+          <input
+            placeholder="Password"
             name="password"
             type="password"
             value={values.password}
@@ -64,9 +63,11 @@ function LoginMain(props) {
             onChange={onChange}
             className="form_input"
           />
-          <Button type="submit" primary>
-            Login
-          </Button>
+          <button type="submit" id="submit_btn">LogIn</button>
+          <div id="link_container">
+          <a href="" className="links">Forget Password?</a>
+          <a href="register" className="links">Create An Account?</a>
+          </div>
         </Form>
         {Object.keys(errors).length > 0 && (
           <div className="ui error message">
