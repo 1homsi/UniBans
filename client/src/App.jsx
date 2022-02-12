@@ -8,9 +8,7 @@ import {
   Navigate,
 } from "react-router-dom";
 
-//Css and Ui Libraries
-// import { Container } from "semantic-ui-react";
-// import "semantic-ui-css/semantic.min.css";
+//scss imports
 import "./Styles/App.scss";
 
 //Private Routes

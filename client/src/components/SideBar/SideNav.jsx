@@ -6,7 +6,12 @@ import { AuthContext } from "../../context/auth";
 function LeftSideBar() {
   return (
     <div>
+      <div className="TopSide">
+        <br />
+        <br />
+      </div>
       <div className="sidenav">
+        <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/">Placeholder</Link>
       </div>
@@ -40,7 +45,6 @@ function RightSideBar() {
                 }}
               ></i>
             </div>
-
             <Link to="/profile">view Profile</Link>
             <button className="Userbutton" onClick={logout}>
               Logout

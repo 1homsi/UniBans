@@ -1,6 +1,5 @@
-// @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-.main {
-  width: 70%;
+.mainAbout {
+  // width: 50%;
   font-family: "Poppins", sans-serif;
   color: beige;
 }
@@ -13,13 +12,12 @@
 .container {
   display: block;
   margin: auto;
-  padding: 100px;
 }
 
 .content-section {
   float: left;
   width: 58%;
-  margin-top: 27%;
+  margin-top: 20%;
   h1 {
     text-transform: uppercase;
     font-size: 40px;
@@ -29,7 +27,7 @@
 .image-section {
   float: right;
   width: 42%;
-  margin-top: 30%;
+  margin-top: 25%;
   img {
     width: 100%;
     height: auto;

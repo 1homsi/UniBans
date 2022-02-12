@@ -1,11 +1,11 @@
 import React from "react";
 import "./About.scss";
-import ReactLogo from "../images/image.svg";
+import ReactLogo from "../../images/About.svg";
 import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="main">
+    <div className="mainAbout">
       <div className="section">
         <div className="container">
           <div className="content-section">
