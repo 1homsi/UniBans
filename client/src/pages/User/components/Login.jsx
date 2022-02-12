@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Button, Form } from "semantic-ui-react";
+import { /*Button,*/ Form } from "semantic-ui-react";
 import { useMutation } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 
@@ -63,10 +63,16 @@ function LoginMain(props) {
             onChange={onChange}
             className="form_input"
           />
-          <button type="submit" id="submit_btn">LogIn</button>
+          <button type="submit" id="submit_btn">
+            LogIn
+          </button>
           <div id="link_container">
-          <a href="" className="links">Forget Password?</a>
-          <a href="register" className="links">Create An Account?</a>
+            <a href="/" className="links">
+              Forget Password?
+            </a>
+            <a href="register" className="links">
+              Create An Account?
+            </a>
           </div>
         </Form>
         {Object.keys(errors).length > 0 && (

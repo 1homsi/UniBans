@@ -46,32 +46,15 @@
   line-height: 1.5;
 }
 
-.content-section .content .button {
-  margin-top: 30px;
-  a {
-    background: linear-gradient(to top right, #8162ce, #f54ba5);
-    color: beige;
-    padding: 10px 25px;
-    text-decoration: none;
-    font-size: 20px;
-    letter-spacing: 1.5px;
-    border-radius: 32px;
-    &:hover {
-      background: beige;
-      color: #8162ce;
-    }
-  }
-}
-
 .content-section .social {
   margin-top: 40px;
   margin-left: 74%;
 }
 .content-section .social i {
-  color: #8162ce;
+  color: #66fcf1;
   font-size: 30px;
   padding: 0px 10px;
   &:hover {
-    color: beige;
+    color: #45a29e;
   }
 }

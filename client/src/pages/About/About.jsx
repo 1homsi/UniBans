@@ -1,9 +1,12 @@
 import React from "react";
 import "./About.scss";
+import { useNavigate } from "react-router-dom";
 import ReactLogo from "../../images/About.svg";
-import { Link } from "react-router-dom";
+import UniButton from "../../components/UniButton/UniButton";
 
 function About() {
+  const nav = useNavigate();
+
   return (
     <div className="mainAbout">
       <div className="section">
@@ -20,9 +23,12 @@ function About() {
                 id perspiciatis magni magnam! Saepe eaque accusamus dignissimos
                 qui quibusdam quas, officia voluptatem esse!
               </p>
-              <div className="button">
-                <Link to="/">Read More</Link>
-              </div>
+              <UniButton
+                text="Read More"
+                onClick={() => {
+                  nav("/");
+                }}
+              />
             </div>
             <div className="social">
               <a href="/">

@@ -1,0 +1,14 @@
+.bt {
+  width: 140px;
+  height: 43px;
+  margin: 10px;
+  border: none;
+  background: #66fcf1;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  &:hover {
+    background: #45a29e;
+    transition: all;
+  }
+}
