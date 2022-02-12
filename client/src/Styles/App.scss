@@ -5,9 +5,13 @@
 body {
   overflow: hidden;
   background-color: #1a1a1d;
-  color: #c5c6c7;
+  color: #eaeff3;
 }
 
 a {
   text-decoration: none;
+  color: #eaeff3;
+  &:hover {
+    color: #c5c6c7;
+  }
 }

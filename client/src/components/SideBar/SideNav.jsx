@@ -32,16 +32,14 @@ function RightSideBar() {
               )}.svg`}
               alt=""
             />
-            <div className="UserContainer">
-              <h1
-                className="UserName"
-                onClick={() => {
-                  navigator.clipboard.writeText(`@${user.username}`);
-                }}
-              >
-                @{user.username}
-              </h1>
-            </div>
+            <h1
+              className="UserName"
+              onClick={() => {
+                navigator.clipboard.writeText(`@${user.username}`);
+              }}
+            >
+              @{user.username}
+            </h1>
             <Link to="/profile">VIEW PROFILE</Link>
             <UniButton text="Logout" onClick={logout} />
           </>

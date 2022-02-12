@@ -1,7 +1,7 @@
 .sidenav {
   color: white;
   height: 100%;
-  width: 13vw;
+  width: 11.5vw;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -11,36 +11,30 @@
   padding-top: 20px;
   margin-top: 150px;
   border-top-right-radius: 70px;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: white;
-  display: block;
-  margin: 15px;
-  padding: 17px;
-}
-
-.sidenav a:first-child {
-  margin-top: 60px;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-  // color: #66fcf1;
-  background-color: #3a3939;
-  width: 100%;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    margin: 15px;
+    padding: 17px;
+    &:first-child {
+      margin-top: 60px;
+    }
+    &:hover {
+      color: #f1f1f1;
+      background-color: #3a3939;
+      width: 100%;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+  }
 }
 
 .RightSideNav {
   text-align: center;
-  color: white;
   border-radius: 50px;
-  height: 80%;
+  height: 60%;
   margin-top: 4vh;
   margin-right: 1.5vw;
   width: 15.5vw;
@@ -51,20 +45,19 @@
   background-color: #2c2c2c;
   overflow-x: hidden;
   padding-top: 20px;
-}
-
-.RightSideNav a {
-  padding: 20px 8px 20px 8px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #c5c6c7;
-  display: block;
-}
-
-.RightSideNav a:hover {
-  color: #c5c6c7;
-  background-color: #3a3939;
-  border-radius: 10px 10px 10px 10px;
+  a {
+    padding: 16px 8px 16px 8px;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    &:hover {
+      color: #c5c6c7;
+      background-color: #3a3939;
+      margin: 20px 25px 20px 25px;
+      border-radius: 10px 10px 10px 10px;
+    }
+  }
 }
 
 .UserName {
@@ -76,155 +69,7 @@
 }
 
 .UserImage {
-  width: 75%;
+  width: 60%;
   padding: 10%;
-  border-radius: 35% 10% 35% 10%;
-}
-
-.Userbutton {
-  width: 90px;
-  height: 43px;
-  margin: 7px;
-  border: none;
-  background: linear-gradient(to top right, #8162ce, #f54ba5);
-  color: white;
-  border-radius: 8px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.UserContainer {
-  display: flex;
-  i {
-    margin-top: 12px;
-    margin-right: 40px;
-    width: 15%;
-    &:hover {
-      color: #ac5757;
-    }
-  }
-  h1 {
-    width: 140%;
-  }
-}
-
-@keyframes OceanOfColors {
-  0% {
-    background-color: #3f0071;
-    border-radius: 0px 0px 350% 0px;
-    width: 9vw;
-  }
-  5% {
-    background-color: #3f0071;
-    border-radius: 0px 0px 300% 0px;
-    width: 10vw;
-  }
-  10% {
-    background-color: #341677;
-    width: 11vw;
-    border-radius: 0px 0px 320% 0px;
-  }
-  15% {
-    background-color: #a32f80;
-    width: 12vw;
-    border-radius: 0px 0px 200% 0px;
-  }
-  20% {
-    background-color: #ff6363;
-    width: 13vw;
-    border-radius: 0px 0px 300% 0px;
-  }
-  25% {
-    background-color: #202060;
-    width: 12vw;
-    border-radius: 0px 0px 350% 0px;
-  }
-  30% {
-    background-color: #4f3b78;
-    width: 11vw;
-    border-radius: 0px 0px 200% 0px;
-  }
-  35% {
-    background-color: #c62a88;
-    width: 10vw;
-    border-radius: 0px 0px 250% 0px;
-  }
-  40% {
-    background-color: #927fbf;
-    border-radius: 0px 0px 350% 0px;
-    width: 9vw;
-  }
-  45% {
-    background-color: #590995;
-    width: 8.5vw;
-    border-radius: 0px 0px 300% 0px;
-  }
-  50% {
-    background-color: #03c4a1;
-    width: 10vw;
-    border-radius: 0px 0px 300% 0px;
-  }
-  55% {
-    background-color: #150485;
-    width: 11vw;
-    border-radius: 0px 0px 300% 0px;
-  }
-  60% {
-    background-color: #3f0071;
-    width: 12vw;
-    border-radius: 0px 0px 250% 0px;
-  }
-  65% {
-    background-color: #3f0071;
-    width: 13vw;
-    border-radius: 0px 0px 200% 0px;
-  }
-  70% {
-    background-color: #c02739;
-    width: 12vw;
-    border-radius: 0px 0px 300% 0px;
-  }
-  75% {
-    background-color: #84142d;
-    width: 11vw;
-    border-radius: 0px 0px 350% 0px;
-  }
-  80% {
-    background-color: #003f5c;
-    width: 10vw;
-    border-radius: 0px 0px 250% 0px;
-  }
-  85% {
-    background-color: #3282b8;
-    width: 9vw;
-    border-radius: 0px 0px 300% 0px;
-  }
-  90% {
-    background-color: #84142d;
-    width: 10vw;
-    border-radius: 0px 0px 300% 0px;
-  }
-  95% {
-    background-color: #0f4c75;
-    width: 11vw;
-    border-radius: 0px 0px 350% 0px;
-  }
-  100% {
-    background-color: #bc4873;
-    width: 12vw;
-    border-radius: 0px 0px 300% 0px;
-  }
-}
-
-.TopSide {
-  color: white;
-  height: 12%;
-  width: 11vw;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  padding-top: 20px;
-  border-radius: 0px 0px 350% 0px;
-  animation: OceanOfColors 50s infinite;
+  border-radius: 37% 15% 37% 15%;
 }

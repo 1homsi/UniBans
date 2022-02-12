@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
-import Layout from "./Layout";
+import AuthLayout from "./AuthLayout";
 
-ReactDOM.render(Layout, document.getElementById("root"));
+ReactDOM.render(AuthLayout, document.getElementById("root"));
 
 serviceWorker.unregister();

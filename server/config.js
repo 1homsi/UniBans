@@ -1,5 +1,5 @@
 module.exports = {
   MONGODB:
     'mongodb://localhost/unibans',
-  SECRET_KEY: 'some very secret key'
+  SECRET_KEY: 'this is very very secret'
 };

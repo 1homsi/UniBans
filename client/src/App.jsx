@@ -20,8 +20,8 @@ import { Login, Register, Profile } from "./pages/User/Index";
 import { Home, About } from "./Routes/AuthRoutes";
 
 //Main Contents import
-import Main from "./pages/Main/Main";
-import NonAuthMain from "./pages/Main/NonAuthMain";
+import Main from "./pages/Main/Auth/Main";
+import NonAuthMain from "./pages/Main/Default/NonAuthMain";
 
 //User Auth import
 import { AuthProvider, AuthContext } from "./context/auth";

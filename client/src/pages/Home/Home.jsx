@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className="main">
       <div className="options">
-        <i class="fas fa-comment"></i>
+        <i className="fas fa-comment"></i>
         <select name="threads" id="" className="find-threads options">
           <option value="your_threads">Your Threads</option>
           <option value="with_your_posts">Threads with your posts</option>
@@ -15,14 +15,14 @@ function Home() {
         </select>
       </div>
       <div className="options">
-        <i class="fas fa-bell"></i>
+        <i className="fas fa-bell"></i>
         <select name="watched" id="" className="whatched options">
           <option value="threads">Watched Threads</option>
           <option value="forums">Watched Forums</option>
         </select>
       </div>
       <Link to="/" className="options">
-        <i class="fas fa-eye-slash"></i>Mark Forums Read
+        <i className="fas fa-eye-slash"></i>Mark Forums Read
       </Link>
       <div className="notes" id="div-trans">
         <p>
